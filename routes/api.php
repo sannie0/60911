@@ -34,6 +34,7 @@ Route::post('/login', [\App\Http\Controllers\AuthController::class, 'login']);
 
 //Route::middleware('auth:sanctum')->get('/logout', [\App\Http\Controllers\AuthController::class, 'logout']);
 
+
 Route::middleware('auth:sanctum')->group(function () {//защищенные маршруты
     //Route::get('/item', [\App\Http\Controllers\ItemControllerApi::class, 'index']); убрала из защищенного маршрута
     Route::get('/user', function(Request $request) {
